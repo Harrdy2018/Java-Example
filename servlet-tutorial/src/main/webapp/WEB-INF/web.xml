@@ -95,4 +95,26 @@
     <servlet-name>10</servlet-name>
     <url-pattern>/addprintb</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>11</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.ServletConfigAndContextServlet</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>config-Harrdy</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>11</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>context-Harrdy2018</param-value>
+  </context-param>
+  <context-param>
+    <param-name>phone</param-name>
+    <param-value>context-xiaomi</param-value>
+  </context-param>
 </web-app>
