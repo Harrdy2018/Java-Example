@@ -59,4 +59,40 @@
     <servlet-name>6</servlet-name>
     <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>7</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.AddOverSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>7</servlet-name>
+    <url-pattern>/addtesta</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>8</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.AddPrintServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>8</servlet-name>
+    <url-pattern>/addprint</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>9</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.AddOverCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>9</servlet-name>
+    <url-pattern>/addtestb</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>10</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.AddPrintBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>10</servlet-name>
+    <url-pattern>/addprintb</url-pattern>
+  </servlet-mapping>
 </web-app>
