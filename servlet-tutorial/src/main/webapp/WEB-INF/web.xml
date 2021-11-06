@@ -7,22 +7,56 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>abc</servlet-name>
+    <servlet-name>1</servlet-name>
     <servlet-class>com.learnservlet.tutorial.AddServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>abc</servlet-name>
+    <servlet-name>1</servlet-name>
     <url-pattern>/add</url-pattern>
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>def</servlet-name>
-    <servlet-class>com.learnservlet.tutorial.SqServlet</servlet-class>
+    <servlet-name>2</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.SquareServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>def</servlet-name>
-    <url-pattern>/sq</url-pattern>
+    <servlet-name>2</servlet-name>
+    <url-pattern>/square</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>3</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.SubtractServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>3</servlet-name>
+    <url-pattern>/subtract</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>4</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.ForwardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>4</servlet-name>
+    <url-pattern>/forward</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>5</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>5</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>6</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>6</servlet-name>
+    <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
 </web-app>

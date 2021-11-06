@@ -5,17 +5,53 @@
     <title>servlet-tutorial Home</title>
 </head>
 <body>
-    <p>post request</p>
-    <form action="add" method="post">
+<div>
+    <h2>service() 方法可以接受post以及get请求</h2>
+    <p>get request</p>
+    <form action="subtract" method="get">
         Enter lst number : <input type="text" name="num1"><br>
         Enter 2nd number : <input type="text" name="num2"><br>
-        <input type="submit">
+        <input type="submit" value="subtract">
     </form>
+    <p>post request</p>
+    <form action="subtract" method="post">
+        Enter lst number : <input type="text" name="num1"><br>
+        Enter 2nd number : <input type="text" name="num2"><br>
+        <input type="submit" value="subtract">
+    </form>
+</div>
+<div>
+    <h2>doGet() 接受get请求</h2>
     <p>get request</p>
     <form action="add" method="get">
         Enter lst number : <input type="text" name="num1"><br>
         Enter 2nd number : <input type="text" name="num2"><br>
-        <input type="submit">
+        <input type="submit" value="add">
     </form>
+    <h2>doPost() 接受post请求</h2>
+    <p>post request</p>
+    <form action="add" method="post">
+        Enter lst number : <input type="text" name="num1"><br>
+        Enter 2nd number : <input type="text" name="num2"><br>
+        <input type="submit" value="add">
+    </form>
+</div>
+
+<div>
+    <h2>页面发起请求，后端接收到不做处理，直接转发</h2>
+    <p>get request</p>
+    <form action="forward" method="get">
+        account : <input type="text" name="account"><br>
+        password : <input type="password" name="password"><br>
+        <input type="submit" value="forward">
+    </form>
+    <h2>页面发起请求，后端处理之后，重定向</h2>
+    <p>post request</p>
+    <form action="redirect" method="post">
+        Enter lst number : <input type="text" name="num1"><br>
+        Enter 2nd number : <input type="text" name="num2"><br>
+        <input type="submit" value="thtSquareOfSum">
+    </form>
+</div>
 </body>
 </html>
