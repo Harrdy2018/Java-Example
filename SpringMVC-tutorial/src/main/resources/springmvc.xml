@@ -17,8 +17,16 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-
             <bean class="com.huawei.handler.MyInterceptor"/>
+        </mvc:interceptor>
+        <!--拦截器的声明顺序就是执行顺序-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.huawei.handler.MyInterceptorA"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.huawei.handler.MyInterceptorB"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>

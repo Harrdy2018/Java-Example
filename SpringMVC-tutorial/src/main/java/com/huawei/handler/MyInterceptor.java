@@ -24,7 +24,7 @@ public class MyInterceptor implements HandlerInterceptor {
      * */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("MyInterceptor preHandle");
+        System.out.println("MyInterceptor firstfirst preHandle");
         // 设置为false之后搞一个提示
         // request.getRequestDispatcher("/tips.jsp").forward(request,response);
         return true;
@@ -36,7 +36,7 @@ public class MyInterceptor implements HandlerInterceptor {
      * */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView mv) throws Exception {
-        System.out.println("MyInterceptor postHandle");
+        System.out.println("MyInterceptor firstfirst postHandle");
         if(mv != null){
             mv.addObject("msg", "修改数据 处理了some.do请求");
             mv.addObject("func", "修改数据 执行了doSome方法");
@@ -55,7 +55,7 @@ public class MyInterceptor implements HandlerInterceptor {
      * */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("MyInterceptor afterCompletion");
+        System.out.println("MyInterceptor firstfirst afterCompletion");
         HttpSession session=request.getSession();
         Object attr=session.getAttribute("attr");
         System.out.println("attr="+attr);
