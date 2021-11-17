@@ -28,5 +28,10 @@
             <mvc:mapping path="/**"/>
             <bean class="com.huawei.handler.MyInterceptorB"/>
         </mvc:interceptor>
+        <!--登录验证功能-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.huawei.handler.MyInterceptorVerify"/>
+        </mvc:interceptor>
     </mvc:interceptors>
 </beans>
