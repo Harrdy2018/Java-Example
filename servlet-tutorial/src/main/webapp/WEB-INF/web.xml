@@ -109,6 +109,15 @@
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>12</servlet-name>
+    <servlet-class>com.learnservlet.tutorial.ExcelDownLoadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>12</servlet-name>
+    <url-pattern>/downloadexcel</url-pattern>
+  </servlet-mapping>
+
   <context-param>
     <param-name>name</param-name>
     <param-value>context-Harrdy2018</param-value>
