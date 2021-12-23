@@ -13,13 +13,13 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <!--声明拦截器-->
+    <!--声明拦截器 拦截器的声明顺序就是执行顺序 -->
+    <!--
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.huawei.handler.MyInterceptor"/>
         </mvc:interceptor>
-        <!--拦截器的声明顺序就是执行顺序-->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.huawei.handler.MyInterceptorA"/>
@@ -28,10 +28,36 @@
             <mvc:mapping path="/**"/>
             <bean class="com.huawei.handler.MyInterceptorB"/>
         </mvc:interceptor>
-        <!--登录验证功能-->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.huawei.handler.MyInterceptorVerify"/>
         </mvc:interceptor>
     </mvc:interceptors>
+    -->
+
+    <!-- 拦截器使用说明 -->
+    <!-- /* 只能拦截 http://localhost:8080/SpringMVC_tutorial/you.do -->
+    <!--
+    /** 能拦截 http://localhost:8080/SpringMVC_tutorial/you.do
+    /** 能拦截 http://localhost:8080/SpringMVC_tutorial/you/you.do
+    /** 能拦截 http://localhost:8080/SpringMVC_tutorial/you/you/you.do
+    -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.huawei.handler.MyInterceptorTest"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--第一种方式处理静态资源 依赖Tomcat服务器 -->
+    <!--
+    <mvc:default-servlet-handler />
+    <mvc:annotation-driven />
+    -->
+
+    <!--第二种方式处理静态资源 不依赖Tomcat服务器 -->
+    <mvc:resources mapping="/images/**" location="/images/" />
+    <mvc:resources mapping="/html/**" location="/html/" />
+    <mvc:resources mapping="/js/**" location="/js/" />
+    <mvc:annotation-driven />
 </beans>

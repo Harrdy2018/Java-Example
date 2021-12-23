@@ -25,11 +25,22 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>MyServlet</servlet-name>
-    <!--
-    把一些请求交给指定的Servlet处理
-    使用"*.do"
-    使用斜杠"/"
-    -->
+    <!--url-pattern的作用是把一些请求交给指定的Servlet处理-->
     <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MyServlet2</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springmvc.xml</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet2</servlet-name>
+    <!-- 中央调度器设置"/" 表示要处理所有剩下的请求 -->
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>

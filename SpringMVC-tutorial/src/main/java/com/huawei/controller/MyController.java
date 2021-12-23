@@ -4,7 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 @Controller
 public class MyController {
@@ -21,6 +24,13 @@ public class MyController {
         // 配置了视图解析器之后
         mv.setViewName("show");
         return mv;
+    }
+
+    @RequestMapping(value={"/you.do", "/you/you.do", "/you/you/you.do"})
+    public void doAll(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        System.out.println("enter MyController doAll ...");
+        res.getWriter().println("Hello World");
+        return;
     }
 }
 
